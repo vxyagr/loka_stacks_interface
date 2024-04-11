@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Row, Col, Typography } from "antd";
 import { useMediaQuery } from "react-responsive";
-import { useTranslation } from "react-i18next";
 
 import useGetScreenSize from "../../hooks/useGetScreenSize";
 
@@ -12,10 +11,9 @@ import OutlierVentures from "../../assets/images/outlier-ventures-logo.png";
 
 import "./style.css";
 
-const { Title, Text, Paragraph } = Typography;
+const { Title, Paragraph } = Typography;
 
 const Home = () => {
-  const { t } = useTranslation();
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isExtraLargeScreen = useMediaQuery({ minWidth: 1920 });
   const screenHeight = useGetScreenSize();
@@ -43,14 +41,21 @@ const Home = () => {
       <Row gutter={[48, 16]}>
         <Col xs={{ span: 24, order: 2 }} md={{ span: 12, order: 1 }}>
           <div className="text-container">
-            <Title className="hero-text">{t("home.heroTitle")}</Title>
+            <Title className="hero-text">
+              Loka - Making Bitcoin Mining Possible for Everyone
+            </Title>
 
             <Paragraph className="sub-hero-text">
-              {t("home.subHeroFirst")}
+              Earn mining reward and get Bitcoin at lower than market price by
+              providing liquidity for miners.
             </Paragraph>
 
             <Paragraph className="sub-hero-text">
-              {t("home.subHeroSecond")}
+              Bitcoin miners share their mining rewards with retail investors
+              who are looking for pre-market access to bitcoin. In exchange,
+              miners get a more secure cash flow to better manage and scale
+              operations. With Loka, both sides help contribute to the continued
+              decentralization of the Bitcoin network.
             </Paragraph>
 
             <Button
@@ -59,7 +64,7 @@ const Home = () => {
               className="about-loka-button"
               size="large"
             >
-              {t("home.homeButton")}
+              About Loka
             </Button>
           </div>
         </Col>
@@ -88,7 +93,7 @@ const Home = () => {
                   className="our-backert-text"
                   style={{ textAlign: isMobile ? "center" : "left" }}
                 >
-                  {t("home.backersText")}
+                  Our Backers:
                 </p>
               </Col>
               <Col

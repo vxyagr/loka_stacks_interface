@@ -1,6 +1,5 @@
 import React from "react";
 import clsx from "clsx";
-import { useTranslation } from "react-i18next";
 import { useMediaQuery } from "react-responsive";
 import { Row, Col, Typography } from "antd";
 import Icon from "@ant-design/icons";
@@ -16,7 +15,6 @@ import "./style.css";
 const { Title, Paragraph } = Typography;
 
 const About = () => {
-  const { t } = useTranslation();
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isExtraLargeScreen = useMediaQuery({ minWidth: 1920 });
 
@@ -33,7 +31,9 @@ const About = () => {
     >
       <Row>
         <Col xs={{ span: 24 }} md={{ span: 11 }}>
-          <Title level={2}>{t("about.title")}</Title>
+          <Title level={2}>
+            There are two main components to the Loka ecosystem
+          </Title>
         </Col>
       </Row>
 
@@ -41,24 +41,29 @@ const About = () => {
         <Col xs={{ span: 24, order: 2 }} md={{ span: 12, order: 1 }}>
           <div className="about-text-container">
             <Title level={3} className={clsx("about-title-text", { isMobile })}>
-              {t("about.miningPoolTitle")}
+              The Loka Mining Pool
             </Title>
 
             <Paragraph className="about-text">
-              {t("about.miningPoolDesc")}
+              Built as a completely decentralized network on the Internet
+              Computer Protocol (ICP), the Loka Mining Pool leverages ICP’s
+              chain-key tech that optimizes for security and low-cost
+              transactions.
             </Paragraph>
 
             <div className="about-info-item">
               <Icon style={{ fontSize: "26px" }} component={CheckIconSvg} />
               <Paragraph className="about-text">
-                {t("about.miningPoolPointFirst")}
+                Anyone can earn a passive income (almost like staking) by
+                providing bitcoin liquidity to miners
               </Paragraph>
             </div>
 
             <div className="about-info-item">
               <Icon style={{ fontSize: "26px" }} component={CheckIconSvg} />
               <Paragraph className="about-text">
-                {t("about.miningPoolPointSecond")}
+                In exchange, miners get a daily payout based on their hashrate
+                contributions
               </Paragraph>
             </div>
           </div>
@@ -93,11 +98,13 @@ const About = () => {
         <Col xs={{ span: 24 }} md={{ span: 12 }}>
           <div className="about-text-container">
             <Title level={3} className={clsx("about-title-text", { isMobile })}>
-              {t("about.hashRateMarketPlaceTitle")}
+              The Loka Hashrate Marketplace
             </Title>
 
             <Paragraph className="about-text">
-              {t("about.hashRateMarketPlaceDesc")}
+              The hashrate marketplace is like bitcoin itself — it’s designed as
+              a peer-to-peer way for miners and retail investors can interact in
+              a non-custodial, trustless manner.
             </Paragraph>
 
             <div className="about-info-item">
@@ -106,7 +113,10 @@ const About = () => {
                 component={RightArrowIconSvg}
               />
               <Paragraph className="about-text">
-                {t("about.hashRateMarketPlacePointFirst")}
+                Invest in a Bitcoin mining operation by purchasing
+                collateralized contracts of future hashrate for a certain period
+                of time from anywhere in the world. Get BTC at lower than market
+                rates in return
               </Paragraph>
             </div>
 
@@ -116,7 +126,10 @@ const About = () => {
                 component={RightArrowIconSvg}
               />
               <Paragraph className="about-text">
-                {t("about.hashRateMarketPlacePointSecond")}
+                Bitcoin miners gain early return on their investment. Steady
+                cashflow can help scale hash rate capacity by purchasing more
+                hardware or the liquidity can be used to hedge the risk of price
+                volatility.
               </Paragraph>
             </div>
           </div>

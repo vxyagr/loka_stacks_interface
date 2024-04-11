@@ -7,7 +7,6 @@ import { useMediaQuery } from "react-responsive";
 import { Layout, Menu, Row, Col, Button } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 
-import LanguageSwitcher from "./components/LanguageSwitcher";
 import Home from "./containers/Home";
 import About from "./containers/About";
 import Testimoni from "./containers/Testimoni";
@@ -154,12 +153,9 @@ function App() {
               </Col>
               <Col xs={{ span: 0 }} md={{ span: 4 }}>
                 <div className="header-button-container">
-                  <div className="language-switcher-container">
-                    <LanguageSwitcher />
-                  </div>
                   <div className="connect-button-header">
                     <Button onClick={() => hanldeSelect({ key: "discord" })}>
-                      {t("joinDiscord")}
+                      Join Discord
                     </Button>
                   </div>
                 </div>

@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Row, Col, Typography } from "antd";
 import { useMediaQuery } from "react-responsive";
-import { useTranslation } from "react-i18next";
 import Icon from "@ant-design/icons";
 
 import LokaLogo from "../../assets/images/loka_logo.png";
@@ -13,7 +12,6 @@ import "./style.css";
 const { Title, Text } = Typography;
 
 const Community = () => {
-  const { t } = useTranslation();
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isExtraLargeScreen = useMediaQuery({ minWidth: 1920 });
 
@@ -78,15 +76,17 @@ const Community = () => {
             style={{ padding: isMobile ? "40px 10%" : "40px 25%" }}
           >
             <Title level={2} className="community-title">
-              {t("community.title")}
+              We are building something awesome here. Join our community.
             </Title>
-            <Text className="community-desc">{t("community.desc")}</Text>
+            <Text className="community-desc">
+              Get updates and latest news about Loka
+            </Text>
             <Button
               onClick={() => hanldeButton("discord")}
               className="join-discord-button"
               size="large"
             >
-              {t("joinDiscord")}
+              Join Discord
             </Button>
           </div>
         </Col>
@@ -153,12 +153,12 @@ const Community = () => {
             className="footer-container"
             style={{ flexDirection: isMobile ? "column" : "row" }}
           >
-            <p>© 2024 Loka. All rights reserved.</p>
-            <div className="footer-menu-container">
+            <p>© 2024 Loka Labs. All rights reserved.</p>
+            {/* <div className="footer-menu-container">
               <p>Term</p>
               <p>Privacy</p>
               <p>Cookies</p>
-            </div>
+            </div> */}
           </div>
         </Col>
       </Row>
