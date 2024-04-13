@@ -8,10 +8,11 @@ import { Layout, Menu, Row, Col, Button } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 
 import Home from "./containers/Home";
-import About from "./containers/About";
+import Ecosystem from "./containers/Ecosystem";
 import Testimoni from "./containers/Testimoni";
 import WhyLoka from "./containers/WhyLoka";
 import Community from "./containers/Community";
+import RoadMap from "./containers/Roadmap";
 
 import LokaLogo from "./assets/images/loka_logo.png";
 import BetaIcon from "./assets/images/button-tag.png";
@@ -170,7 +171,8 @@ function App() {
             >
               <Home />
               {/* <Testimoni /> */}
-              <About />
+              <Ecosystem />
+              <RoadMap />
               <WhyLoka />
               <Community />
             </div>

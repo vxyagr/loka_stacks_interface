@@ -1,0 +1,115 @@
+.roadmap-container {
+    background-color: #151c2b;
+}
+
+.roadmap-container .ant-typography {
+    color: white;
+}
+
+.roadmap-title.ant-typography {
+    font-family: FamiljenGrotesk !important;
+}
+
+.roadmap-steps .ant-steps-item-tail::after {
+    background-color: white !important;
+    width: 100% !important;
+    margin-inline-start : 0px !important;
+}
+
+.roadmap-steps-mobile .ant-steps-item-tail::after {
+    background-color: white !important;
+    width: 2px !important;
+}
+
+.roadmap-steps-mobile .ant-steps-item-tail {
+    padding: 0px !important;
+}
+
+
+
+.start-end-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.start-end-dot.isMobile {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: 1px;
+}
+
+
+.custom-dot  {
+    width: 18px; 
+    height: 18px;
+    border-radius: 50%; 
+    background-color: rgba(236, 164, 0, 1);
+    margin-top: -5px;
+    position: relative; 
+}
+
+.custom-dot-line {
+    width: 1px; 
+    height: 90px; 
+    background-color: rgba(236, 164, 0, 1); 
+    position: absolute; 
+    left: 50%; 
+    top: 100%;
+    transform: translateX(-50%); 
+}
+
+.custom-dot.isMobile  {
+    width: 18px; 
+    height: 18px;
+    border-radius: 50%; 
+    background-color: rgba(236, 164, 0, 1);
+    margin-left: -4px;
+    position: relative; 
+}
+
+.roadmap-steps .ant-steps-item-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: left;
+    color: white !important;
+}
+
+.roadmap-steps-mobile .ant-steps-item-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    text-align: left;
+    color: white !important;
+}
+
+
+  
+.roadmap-steps .ant-steps-item-content {
+    width: 200px !important;
+}
+
+
+.roadmap-steps .ant-steps-item-title {
+    position: absolute; 
+    top: -3em; 
+    transform: translateX(-50%);
+    left: 70px;
+  }
+
+
+/* add more trail line before and after */
+
+/* .roadmap-steps .ant-steps-item-container:first-child .ant-steps-item-tail {
+    margin-inline : 0px !important
+}
+
+.roadmap-steps .ant-steps-item-container:last-child .ant-steps-item-tail {
+   width: 100% !important;
+} */
+
+

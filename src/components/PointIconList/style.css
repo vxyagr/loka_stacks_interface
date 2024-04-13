@@ -1,0 +1,32 @@
+
+
+.point-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: left;
+    color: white;
+}
+
+.point-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.point-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: white ;
+}
+
+.point-icon {
+    font-size: 20px;
+}
+
+.point-icon svg  {
+    stroke: #ffffff;
+    fill: transparent !important;
+  }

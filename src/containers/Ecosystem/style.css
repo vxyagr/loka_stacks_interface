@@ -1,19 +1,23 @@
-.about-loka-container {
+.ecosystem-loka-container {
     background-color: #151c2b;
 }
 
-.about-loka-container .ant-typography {
+.ecosystem-loka-container .ant-typography {
     color: white;
 }
 
-.about-image-container {
+.ecosystem-main-title.ant-typography {
+    font-family: FamiljenGrotesk !important;
+}
+
+.ecosystem-image-container {
     width: 100%;
     height: 100%; 
     display: flex;
     justify-content: center;
 }
 
-.about-text {
+.ecosystem-text {
     font-size: 16px;
     font-weight: 400;
     line-height: 32px;
@@ -22,17 +26,17 @@
     margin: 0px;
 }
 
-.about-info-item {
+.ecosystem-info-item {
     display: flex;
     gap: 10px;
     align-items: flex-start;
     margin-bottom: 16px;
 }
 
-.about-info-item .anticon {
+.ecosystem-info-item .anticon {
     margin-top: 8px;
 }
 
-.about-title-text.isMobile {
+.ecosystem-title-text.isMobile {
     margin-top: 10px ;
 }
