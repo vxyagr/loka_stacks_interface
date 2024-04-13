@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Button, Row, Col, Typography, Input } from "antd";
+import { Button, Row, Col, Typography, Input, message } from "antd";
 import { useMediaQuery } from "react-responsive";
 import Icon from "@ant-design/icons";
 import { useNavigate, useLocation } from "react-router-dom";
+import axios from "axios";
 
 import LokaLogo from "../../assets/images/loka_logo.png";
 import { ReactComponent as TwitterIconSvg } from "../../assets/icons/twitter.svg";
@@ -18,8 +19,10 @@ const Community = ({ subscribeRef }) => {
   const navigate = useNavigate();
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isExtraLargeScreen = useMediaQuery({ minWidth: 1920 });
+  const [loading, setLoading] = useState(false);
   const [emailValue, setEmailValue] = useState(null);
   const [error, setError] = useState(null);
+  const [isSuccessSubmit, setIsSuccessSubmit] = useState(null);
 
   const hanldeButton = (type) => {
     switch (type) {
@@ -71,6 +74,62 @@ const Community = ({ subscribeRef }) => {
     });
   };
 
+  const handleSubmitEmail = () => {
+    setLoading(true);
+
+    const url = "https://api.lokamining.com/subscribe";
+
+    axios
+      .get(url, {
+        params: {
+          email: emailValue,
+        },
+      })
+      .then((data) => {
+        const result = data?.data?.result;
+
+        if (result === "success") {
+          setIsSuccessSubmit(
+            "Your subscription is confirmed. Watch your inbox for the latest from us."
+          );
+          setTimeout(() => {
+            setIsSuccessSubmit(null);
+            setEmailValue(null);
+          }, 5000);
+        } else if (result === "exist") {
+          setIsSuccessSubmit(
+            "You're already on our list to receive the latest updates and insights. Stay tuned!"
+          );
+
+          setTimeout(() => {
+            setIsSuccessSubmit(null);
+            setEmailValue(null);
+          }, 5000);
+        } else {
+          throw new Error("failed");
+        }
+      })
+      .catch(function (error) {
+        message.error("failed subscribe email !");
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/; // Regex untuk validasi email
+    return emailRegex.test(email);
+  };
+
+  useEffect(() => {
+    if (emailValue && !validateEmail(emailValue)) {
+      setError("Please enter a valid email address.");
+    } else {
+      setError("");
+    }
+  }, [emailValue]);
+
   return (
     <div
       className={clsx("community-container", { isMobile })}
@@ -100,30 +159,38 @@ const Community = ({ subscribeRef }) => {
               className="subscribe-form-section"
               style={{ flexDirection: isMobile ? "column" : "row" }}
             >
-              <Input
-                value={emailValue}
-                size="large"
-                placeholder="Please enter your email address"
-                className="subscribe-email-input"
-                style={{
-                  width: 280,
-                }}
-                status={error ? "error" : ""}
-                onChange={(e) => {
-                  setEmailValue(e.target.value);
-                  if (!e.target.value) {
-                    setError("");
-                  }
-                }}
-              />
+              <div>
+                <Input
+                  value={emailValue}
+                  size="large"
+                  placeholder="Please enter your email address"
+                  className="subscribe-email-input"
+                  style={{
+                    width: 280,
+                  }}
+                  status={error ? "error" : ""}
+                  onChange={(e) => {
+                    setEmailValue(e.target.value);
+                    if (!e.target.value) {
+                      setError("");
+                    }
+                  }}
+                />
+                <p className="error-text">{error}</p>
+              </div>
               <Button
-                onClick={() => hanldeButton("discord")}
+                onClick={() => handleSubmitEmail()}
                 className="subscribe-button"
                 size="large"
+                loading={loading}
+                disabled={!validateEmail(emailValue)}
               >
                 Subscribe
               </Button>
             </div>
+            {isSuccessSubmit && (
+              <p className="success-text">{isSuccessSubmit}</p>
+            )}
           </div>
         </Col>
       </Row>

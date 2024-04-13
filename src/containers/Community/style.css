@@ -150,3 +150,19 @@
 .footer-linkable-text:hover {
    text-decoration: underline;
 }
+
+.error-text {
+    text-align: left;
+    color: red;
+    font-size: 10px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.success-text {
+    text-align: center;
+    color: #ECA400;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
