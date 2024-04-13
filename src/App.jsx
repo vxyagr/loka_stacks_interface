@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef, Suspense } from "react";
 import clsx from "clsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { ConfigProvider } from "antd";
-import { useTranslation } from "react-i18next";
 import { useMediaQuery } from "react-responsive";
 import { Layout, Menu, Row, Col, Button } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
@@ -13,6 +13,8 @@ import Testimoni from "./containers/Testimoni";
 import WhyLoka from "./containers/WhyLoka";
 import Community from "./containers/Community";
 import RoadMap from "./containers/Roadmap";
+import FeatureReference from "./containers/FeatureReference";
+import PrivacyPolicy from "./containers/PrivacyPolicy";
 
 import LokaLogo from "./assets/images/loka_logo.png";
 import BetaIcon from "./assets/images/button-tag.png";
@@ -47,10 +49,11 @@ const themeProvider = {
 };
 
 function App() {
-  const { t } = useTranslation();
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isExtraLargeScreen = useMediaQuery({ minWidth: 1920 });
   const [headerOpacity, setHeaderOpacity] = useState(0);
+
+  const subscribeRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -103,6 +106,12 @@ function App() {
     }
   };
 
+  const gotoSubscribeSection = () => {
+    setTimeout(() => {
+      subscribeRef.current.scrollIntoView({ behavior: "smooth" });
+    }, 300);
+  };
+
   return (
     <>
       <Helmet>
@@ -126,6 +135,7 @@ function App() {
                     src={LokaLogo}
                     alt="loka"
                     width={isMobile ? "24%" : "70%"}
+                    onClick={() => (window.location.href = "/")}
                   />
                 </div>
               </Col>
@@ -154,9 +164,9 @@ function App() {
               </Col>
               <Col xs={{ span: 0 }} md={{ span: 4 }}>
                 <div className="header-button-container">
-                  <div className="connect-button-header">
-                    <Button onClick={() => hanldeSelect({ key: "discord" })}>
-                      Join Discord
+                  <div className="subscribe-button-header">
+                    <Button onClick={() => gotoSubscribeSection()}>
+                      Subscribe
                     </Button>
                   </div>
                 </div>
@@ -169,12 +179,35 @@ function App() {
                 marginTop: "-64px",
               }}
             >
-              <Home />
-              {/* <Testimoni /> */}
-              <Ecosystem />
-              <RoadMap />
-              <WhyLoka />
-              <Community />
+              <BrowserRouter>
+                <Routes>
+                  <Route
+                    path="/"
+                    element={
+                      <Suspense fallback={<>...</>}>
+                        <>
+                          <Home />
+                          {/* <Testimoni /> */}
+                          <FeatureReference />
+                          <Ecosystem />
+                          <RoadMap />
+                          {/* <WhyLoka /> */}
+                          <Community subscribeRef={subscribeRef} />
+                        </>
+                      </Suspense>
+                    }
+                  />
+
+                  <Route
+                    path="/privacy-policy"
+                    element={
+                      <Suspense fallback={<>...</>}>
+                        <PrivacyPolicy />
+                      </Suspense>
+                    }
+                  />
+                </Routes>
+              </BrowserRouter>
             </div>
           </Content>
         </Layout>

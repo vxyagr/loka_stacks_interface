@@ -2,14 +2,18 @@ import React from "react";
 import { Button, Row, Col, Typography } from "antd";
 import { useMediaQuery } from "react-responsive";
 
+import { ArrowRightOutlined } from "@ant-design/icons";
+
 import useGetScreenSize from "../../hooks/useGetScreenSize";
 
 import HeroImage from "../../assets/images/hero-image.png";
-import BitcoinStartup from "../../assets/images/bitcoin-startup-logo.png";
-import Dfinity from "../../assets/images/dfinity-logo.png";
-import OutlierVentures from "../../assets/images/outlier-ventures-logo.png";
+import BitcoinStartup from "../../assets/images/bitcoin-startup-lab-white.png";
+import Dfinity from "../../assets/images/dfinity-white.png";
+import OutlierVentures from "../../assets/images/outlier-ventures-white.png";
+import Kilonova from "../../assets/images/kilonova-white.png";
 
 import "./style.css";
+import clsx from "clsx";
 
 const { Title, Paragraph } = Typography;
 
@@ -42,12 +46,12 @@ const Home = () => {
         <Col xs={{ span: 24, order: 2 }} md={{ span: 12, order: 1 }}>
           <div className="text-container">
             <Title className="hero-text">
-              Loka - Making Bitcoin Mining Possible for Everyone
+              Loka — The Native Yield Protocol for Bitcoin
             </Title>
 
             <Paragraph className="sub-hero-text">
-              Earn mining reward and get Bitcoin at lower than market price by
-              providing liquidity for miners.
+              Earn native yield from your idle Bitcoin or gain access to Bitcoin
+              at below-market prices.
             </Paragraph>
 
             <Paragraph className="sub-hero-text">
@@ -55,16 +59,17 @@ const Home = () => {
               who are looking for pre-market access to bitcoin. In exchange,
               miners get a more secure cash flow to better manage and scale
               operations. With Loka, both sides help contribute to the continued
-              decentralization of the Bitcoin network.
+              decentralization of
             </Paragraph>
 
             <Button
               onClick={handleHomeButton}
               block={isMobile}
-              className="about-loka-button"
+              className={clsx("about-loka-button", { isMobile })}
               size="large"
             >
-              About Loka
+              About LOKA
+              {!isMobile && <ArrowRightOutlined />}
             </Button>
           </div>
         </Col>
@@ -88,13 +93,8 @@ const Home = () => {
               gutter={[16, 48]}
               style={{ width: "100%" }}
             >
-              <Col xs={{ span: 24 }} md={{ span: 4 }}>
-                <p
-                  className="our-backert-text"
-                  style={{ textAlign: isMobile ? "center" : "left" }}
-                >
-                  Our Backers:
-                </p>
+              <Col span={24}>
+                <p className="our-backert-text">Backed by:</p>
               </Col>
               <Col
                 className="our-backert-logo"
@@ -116,6 +116,13 @@ const Home = () => {
                 md={{ span: 6 }}
               >
                 <img src={OutlierVentures} alt="btcsl" width={"80%"} />
+              </Col>
+              <Col
+                className="our-backert-logo"
+                xs={{ span: 18 }}
+                md={{ span: 6 }}
+              >
+                <img src={Kilonova} alt="btcsl" width={"80%"} />
               </Col>
             </Row>
           </div>

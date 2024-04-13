@@ -62,10 +62,10 @@ const RoadMap = () => {
       className="roadmap-container"
       style={{
         padding: isExtraLargeScreen
-          ? "97px 250px"
+          ? "57px 250px"
           : isMobile
           ? "40px 24px"
-          : "97px 124px",
+          : "57px 124px",
       }}
     >
       <Row>

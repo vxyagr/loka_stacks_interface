@@ -6,9 +6,9 @@ import Icon from "@ant-design/icons";
 
 import Illustration1 from "../../assets/images/about-illustration1.png";
 import Illustration2 from "../../assets/images/about-illustration2.png";
+import Illustration3 from "../../assets/images/about-illustration3.png";
 
-import { ReactComponent as CheckIconSvg } from "../../assets/icons/check-icon.svg";
-import { ReactComponent as RightArrowIconSvg } from "../../assets/icons/right-arrow-icon.svg";
+import { ReactComponent as RightArrowIconSvg } from "../../assets/icons/chevron-right.svg";
 
 import "./style.css";
 
@@ -23,16 +23,16 @@ const Ecosystem = () => {
       className="ecosystem-loka-container"
       style={{
         padding: isExtraLargeScreen
-          ? "97px 250px"
+          ? "57px 250px"
           : isMobile
           ? "40px 24px"
-          : "97px 124px",
+          : "57px 124px",
       }}
     >
       <Row>
         <Col xs={{ span: 24 }} md={{ span: 11 }}>
           <Title level={2} className="ecosystem-main-title">
-            There are two main components to the Loka ecosystem
+            Loka Ecosystem is built upon 3 infrastructure pillars:
           </Title>
         </Col>
       </Row>
@@ -44,29 +44,32 @@ const Ecosystem = () => {
               level={3}
               className={clsx("ecosystem-title-text", { isMobile })}
             >
-              The Loka Mining Pool
+              Decentralized Mining Pool
             </Title>
 
             <Paragraph className="ecosystem-text">
-              Built as a completely decentralized network on the Internet
-              Computer Protocol (ICP), the Loka Mining Pool leverages ICP’s
-              chain-key tech that optimizes for security and low-cost
-              transactions.
+              A non-custodial, trust-minimized Bitcoin mining pool, built
+              towards a fully secured & decentralized infrastructure where
+              everyone can participate.
             </Paragraph>
 
             <div className="ecosystem-info-item">
-              <Icon style={{ fontSize: "26px" }} component={CheckIconSvg} />
+              <Icon
+                style={{ fontSize: "26px" }}
+                component={RightArrowIconSvg}
+              />
               <Paragraph className="ecosystem-text">
-                Anyone can earn a passive income (almost like staking) by
-                providing bitcoin liquidity to miners
+                No minimum daily payout with highest reward for Bitcoin miners
               </Paragraph>
             </div>
 
             <div className="ecosystem-info-item">
-              <Icon style={{ fontSize: "26px" }} component={CheckIconSvg} />
+              <Icon
+                style={{ fontSize: "26px" }}
+                component={RightArrowIconSvg}
+              />
               <Paragraph className="ecosystem-text">
-                In exchange, miners get a daily payout based on their hashrate
-                contributions
+                Fully permissionless without needing any KYC
               </Paragraph>
             </div>
           </div>
@@ -104,13 +107,14 @@ const Ecosystem = () => {
               level={3}
               className={clsx("ecosystem-title-text", { isMobile })}
             >
-              The Loka Hashrate Marketplace
+              Bitcoin Liquidity Pool
             </Title>
 
             <Paragraph className="ecosystem-text">
-              The hashrate marketplace is like bitcoin itself — it’s designed as
-              a peer-to-peer way for miners and retail investors can interact in
-              a non-custodial, trustless manner.
+              Instead of relying on a centralized party to ensure Bitcoin miners
+              get paid daily for their hash rate contribution, Loka enables
+              anyone to provide liquidity and distribute profits from the mining
+              pool fees via rebase 1:1 liquid LP token.
             </Paragraph>
 
             <div className="ecosystem-info-item">
@@ -119,10 +123,8 @@ const Ecosystem = () => {
                 component={RightArrowIconSvg}
               />
               <Paragraph className="ecosystem-text">
-                Invest in a Bitcoin mining operation by purchasing
-                collateralized contracts of future hashrate for a certain period
-                of time from anywhere in the world. Get BTC at lower than market
-                rates in return
+                Compound your idle Bitcoin with native yield from Bitcoin mining
+                economy
               </Paragraph>
             </div>
 
@@ -132,12 +134,63 @@ const Ecosystem = () => {
                 component={RightArrowIconSvg}
               />
               <Paragraph className="ecosystem-text">
-                Bitcoin miners gain early return on their investment. Steady
-                cashflow can help scale hash rate capacity by purchasing more
-                hardware or the liquidity can be used to hedge the risk of price
-                volatility.
+                Bridge your native Bitcoin in, and get more out. Anytime.
               </Paragraph>
             </div>
+          </div>
+        </Col>
+      </Row>
+
+      <Row style={{ marginTop: "50px" }}>
+        <Col xs={{ span: 24, order: 2 }} md={{ span: 12, order: 1 }}>
+          <div className="ecosystem-text-container">
+            <Title
+              level={3}
+              className={clsx("ecosystem-title-text", { isMobile })}
+            >
+              Forward-Hashrate Marketplace Protocol
+            </Title>
+
+            <Paragraph className="ecosystem-text">
+              A permissionless and non-custodial protocol where investors can
+              purchase future mining rewards at-a-discount in the form of a
+              forward hashrate contract directly from Bitcoin miners worldwide.
+            </Paragraph>
+
+            <div className="ecosystem-info-item">
+              <Icon
+                style={{ fontSize: "26px" }}
+                component={RightArrowIconSvg}
+              />
+              <Paragraph className="ecosystem-text">
+                All contracts are overcollateralized with Bitcoin, eliminating
+                counterparty risks (you can’t be rugpulled)
+              </Paragraph>
+            </div>
+
+            <div className="ecosystem-info-item">
+              <Icon
+                style={{ fontSize: "26px" }}
+                component={RightArrowIconSvg}
+              />
+              <Paragraph className="ecosystem-text">
+                Contracts are tokenized with immediate liquidity on secondary
+                market (you can sell it right away or use as collateral against
+                $)
+              </Paragraph>
+            </div>
+          </div>
+        </Col>
+        <Col xs={{ span: 24, order: 1 }} md={{ span: 12, order: 2 }}>
+          <div
+            className="ecosystem-image-container"
+            style={{ justifyContent: "flex-end" }}
+          >
+            <img
+              src={Illustration3}
+              alt="loka-miningpool"
+              width={isMobile ? "100%" : "80%"}
+            />
           </div>
         </Col>
       </Row>

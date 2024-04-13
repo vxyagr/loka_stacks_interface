@@ -16,18 +16,25 @@
 }
 
 .about-loka-button {
-    background: linear-gradient(88.85deg, #043153 -9.61%, #E09B00 116.77%);
-    color: white;
+    margin-top: 36px ;
+    border: none !important;
+    background: none !important;
+    color: rgba(236, 164, 0, 1) !important;
+}
+
+.about-loka-button.isMobile {
+    background:  linear-gradient(89.4deg, rgba(51, 15, 150, 0.8) -5.26%, rgba(131, 9, 141, 0.8) 104.63%) !important;
+    color: white !important;
     border: none !important;
     padding: 0px 24px !important;
     margin-top: 36px;
     height: 48px !important;
 }
 
-.about-loka-button:hover {
+/* .about-loka-button:hover {
     color: white !important;
     background: linear-gradient(88.85deg, #043153 -9.61%, #E09B00 116.77%) !important;
-}
+} */
 
 .hero-image-container {
     width: 100%;
@@ -39,7 +46,7 @@
 }
 
 .backers-container {
-    background: #FFFFFFE5;
+    /* background: #FFFFFFE5; */
     padding: 48px 24px;
     display: flex;
     justify-content: space-between;
@@ -52,8 +59,9 @@
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 0em;
-    text-align: left;
+    text-align: center;
     margin: 0px;
+    color: white;
 }
 
 .our-backert-logo {
