@@ -3,6 +3,11 @@
     background: radial-gradient(75% 60% at 155% 60%, #996A11 30%, #151c2b);
 }
 
+.features-reference-container.isMobile {
+    background: none !important;
+    background-color: #151c2b !important;
+}
+
 .box-section {
     width: 100%;
     background: rgba(255, 255, 255, 0.2);

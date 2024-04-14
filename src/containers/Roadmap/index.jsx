@@ -76,7 +76,7 @@ const RoadMap = () => {
         </Col>
       </Row>
 
-      <Row style={{ marginTop: "100px" }}>
+      <Row style={{ marginTop: isMobile ? "50px" : "100px" }}>
         <Col span={24}>
           <Steps
             className={!isMobile ? "roadmap-steps" : "roadmap-steps-mobile"}

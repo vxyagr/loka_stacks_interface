@@ -1,61 +1,18 @@
-import React from "react";
-import clsx from "clsx";
+import React, { useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
-import { Row, Col, Typography, Steps } from "antd";
-
-import PointIconList from "../../components/PointIconList";
+import { Row, Col, Typography } from "antd";
 
 import "./style.css";
 
 const { Title, Paragraph, Text } = Typography;
 
-const roadmapItems = [
-  {
-    title: "Current",
-    listTitle: "Mining Pool Beta",
-    list: [
-      "Live now",
-      "Current state. 80+ miners connected",
-      "Acquired miners from Ethiopia, Indonesia, Malaysia, Russia etc.",
-    ],
-  },
-  {
-    title: "Q2 2024",
-    listTitle: "Decentralized Mining Pool",
-    list: [
-      "Bridge native Bitcoin to supply liquidity for Bitcoin miners",
-      "Earn native yield from mining pool fees + reward points",
-    ],
-  },
-  {
-    title: "Q3 2024",
-    listTitle: "Forward Hashrate Marketplace",
-    list: [
-      "Access Bitcoin at lower than market price by purchasing forward contract directly from Bitcoin miners",
-      "Bring liquidity from future mining rewards into DeFi",
-    ],
-  },
-  {
-    title: "Early 2025",
-    listTitle: "Bitcoin Meta Layer",
-    list: [
-      "The only Bitcoin layer that provides native yield",
-      "Multichain interoperability with other gasless transactions and compounding yield from validators + tokenized mining economy",
-    ],
-  },
-];
-
 const PrivacyPolicy = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isExtraLargeScreen = useMediaQuery({ minWidth: 1920 });
 
-  const customDot = (dot, { index }) => {
-    return (
-      <div className={clsx("custom-dot", { isMobile })}>
-        {!isMobile && <div className="custom-dot-line" />}
-      </div>
-    );
-  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div

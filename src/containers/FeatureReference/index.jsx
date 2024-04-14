@@ -19,13 +19,41 @@ const FeatureReference = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isExtraLargeScreen = useMediaQuery({ minWidth: 1920 });
 
-  const handleRedirect = () => {
-    console.log("redire");
+  const handleRedirect = (key) => {
+    switch (key) {
+      case "miner":
+        window.open(
+          "https://miner.lokamining.com/",
+          "_blank",
+          "noopener,noreferrer"
+        );
+        break;
+      case "lender":
+        window.open("https://lokamining.com/", "_blank", "noopener,noreferrer");
+        break;
+      case "coindesk":
+        window.open(
+          "https://www.coindesk.com/consensus-magazine/2024/04/10/ordinals-defy-bitcoins-design-principles-but-offer-miners-huge-post-halving-advantages/",
+          "_blank",
+          "noopener,noreferrer"
+        );
+        break;
+      case "cointelegraph":
+        window.open(
+          "https://cointelegraph.com/news/is-the-bitcoin-halving-priced-in-analysts-compare-btc-price-targets-vs-previous-halvings",
+          "_blank",
+          "noopener,noreferrer"
+        );
+        break;
+
+      default:
+        break;
+    }
   };
 
   return (
     <div
-      className="features-reference-container"
+      className={clsx("features-reference-container", { isMobile })}
       style={{
         padding: isExtraLargeScreen
           ? "97px 250px"
@@ -55,7 +83,7 @@ const FeatureReference = () => {
             </div>
 
             <Button
-              onClick={handleRedirect}
+              onClick={() => handleRedirect("miner")}
               className={clsx("feature-button", { isMobile })}
               type={isMobile ? "text" : "default"}
               size="large"
@@ -85,7 +113,7 @@ const FeatureReference = () => {
             </div>
 
             <Button
-              onClick={handleRedirect}
+              onClick={() => handleRedirect("lender")}
               block={isMobile}
               className={clsx("feature-button", { isMobile })}
               size="large"
@@ -108,39 +136,37 @@ const FeatureReference = () => {
           <p className="featured-in-title">As featured in</p>
         </Col>
         <Col xs={{ span: 24 }} lg={{ span: 12 }}>
-          <div className="featured-in-section">
-            <a href="https://www.coindesk.com/consensus-magazine/2024/04/10/ordinals-defy-bitcoins-design-principles-but-offer-miners-huge-post-halving-advantages/">
-              <img src={CoinDeskLogo} alt="coindesk" />
-            </a>
-            <a href="https://www.coindesk.com/consensus-magazine/2024/04/10/ordinals-defy-bitcoins-design-principles-but-offer-miners-huge-post-halving-advantages/">
-              <div className="featured-in-textsection">
-                <Icon style={{ fontSize: "28px" }} component={QuoteLogo} />
-                <p className="featured-point-text">
-                  "..this year, miners of any size from other parts of the world
-                  have additional funding options to upgrade their operations.
-                  They can utilize the upcoming Loka's permissionless
-                  marketplace, which can connect miners directly to retail
-                  investors looking for BTC at lower-than-market prices."
-                </p>
-              </div>
-            </a>
+          <div
+            className="featured-in-section"
+            onClick={() => handleRedirect("coindesk")}
+          >
+            <img src={CoinDeskLogo} alt="coindesk" />
+            <div className="featured-in-textsection">
+              <Icon style={{ fontSize: "28px" }} component={QuoteLogo} />
+              <p className="featured-point-text">
+                "..this year, miners of any size from other parts of the world
+                have additional funding options to upgrade their operations.
+                They can utilize the upcoming Loka's permissionless marketplace,
+                which can connect miners directly to retail investors looking
+                for BTC at lower-than-market prices."
+              </p>
+            </div>
           </div>
         </Col>
         <Col xs={{ span: 24 }} lg={{ span: 12 }}>
-          <div className="featured-in-section">
-            <a href="https://cointelegraph.com/news/is-the-bitcoin-halving-priced-in-analysts-compare-btc-price-targets-vs-previous-halvings">
-              <img src={CoinTelegraphLogo} alt="cointelegraph" />
-            </a>
-            <a href="https://cointelegraph.com/news/is-the-bitcoin-halving-priced-in-analysts-compare-btc-price-targets-vs-previous-halvings">
-              <div className="featured-in-textsection">
-                <Icon style={{ fontSize: "28px" }} component={QuoteLogo} />
-                <p className="featured-point-text">
-                  “..decentralized Bitcoin mining pool Loka Mining, anticipates
-                  short-term volatility consistent with previous halvings due to
-                  supply shock and reduced inflation rate.”
-                </p>
-              </div>
-            </a>
+          <div
+            className="featured-in-section"
+            onClick={() => handleRedirect("cointelegraph")}
+          >
+            <img src={CoinTelegraphLogo} alt="cointelegraph" />
+            <div className="featured-in-textsection">
+              <Icon style={{ fontSize: "28px" }} component={QuoteLogo} />
+              <p className="featured-point-text">
+                “..decentralized Bitcoin mining pool Loka Mining, anticipates
+                short-term volatility consistent with previous halvings due to
+                supply shock and reduced inflation rate.”
+              </p>
+            </div>
           </div>
         </Col>
       </Row>
