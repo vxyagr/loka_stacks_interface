@@ -109,30 +109,38 @@ const FeatureReference = () => {
         </Col>
         <Col xs={{ span: 24 }} lg={{ span: 12 }}>
           <div className="featured-in-section">
-            <img src={CoinDeskLogo} alt="coindesk" />
-            <div className="featured-in-textsection">
-              <Icon style={{ fontSize: "28px" }} component={QuoteLogo} />
-              <p className="featured-point-text">
-                "..this year, miners of any size from other parts of the world
-                have additional funding options to upgrade their operations.
-                They can utilize the upcoming Loka's permissionless marketplace,
-                which can connect miners directly to retail investors looking
-                for BTC at lower-than-market prices."
-              </p>
-            </div>
+            <a href="https://www.coindesk.com/consensus-magazine/2024/04/10/ordinals-defy-bitcoins-design-principles-but-offer-miners-huge-post-halving-advantages/">
+              <img src={CoinDeskLogo} alt="coindesk" />
+            </a>
+            <a href="https://www.coindesk.com/consensus-magazine/2024/04/10/ordinals-defy-bitcoins-design-principles-but-offer-miners-huge-post-halving-advantages/">
+              <div className="featured-in-textsection">
+                <Icon style={{ fontSize: "28px" }} component={QuoteLogo} />
+                <p className="featured-point-text">
+                  "..this year, miners of any size from other parts of the world
+                  have additional funding options to upgrade their operations.
+                  They can utilize the upcoming Loka's permissionless
+                  marketplace, which can connect miners directly to retail
+                  investors looking for BTC at lower-than-market prices."
+                </p>
+              </div>
+            </a>
           </div>
         </Col>
         <Col xs={{ span: 24 }} lg={{ span: 12 }}>
           <div className="featured-in-section">
-            <img src={CoinTelegraphLogo} alt="coindesk" />
-            <div className="featured-in-textsection">
-              <Icon style={{ fontSize: "28px" }} component={QuoteLogo} />
-              <p className="featured-point-text">
-                “..decentralized Bitcoin mining pool Loka Mining, anticipates
-                short-term volatility consistent with previous halvings due to
-                supply shock and reduced inflation rate.”
-              </p>
-            </div>
+            <a href="https://cointelegraph.com/news/is-the-bitcoin-halving-priced-in-analysts-compare-btc-price-targets-vs-previous-halvings">
+              <img src={CoinTelegraphLogo} alt="cointelegraph" />
+            </a>
+            <a href="https://cointelegraph.com/news/is-the-bitcoin-halving-priced-in-analysts-compare-btc-price-targets-vs-previous-halvings">
+              <div className="featured-in-textsection">
+                <Icon style={{ fontSize: "28px" }} component={QuoteLogo} />
+                <p className="featured-point-text">
+                  “..decentralized Bitcoin mining pool Loka Mining, anticipates
+                  short-term volatility consistent with previous halvings due to
+                  supply shock and reduced inflation rate.”
+                </p>
+              </div>
+            </a>
           </div>
         </Col>
       </Row>
