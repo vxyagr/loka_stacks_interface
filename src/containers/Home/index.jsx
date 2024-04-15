@@ -55,11 +55,10 @@ const Home = () => {
             </Paragraph>
 
             <Paragraph className="sub-hero-text">
-              Bitcoin miners share their mining rewards with retail investors
-              who are looking for pre-market access to bitcoin. In exchange,
-              miners get a more secure cash flow to better manage and scale
-              operations. With Loka, both sides help contribute to the continued
-              decentralization of
+              Loka is revolutionizing the Bitcoin mining ecosystem by directly
+              connecting investors with Bitcoin miners through a decentralized
+              mining pool and a permissionless forward hashrate marketplace
+              protocol.
             </Paragraph>
 
             <Button
