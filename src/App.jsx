@@ -115,7 +115,7 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>Loka Mining Protocol</title>
+        <title>Loka -- The Bitcoin Meta Layer with Native Yield Protocol</title>
         <link rel="icon" type="png" href={smallIcon} />
         <link rel="apple-touch-icon" type="png" href={smallIcon} />
       </Helmet>
