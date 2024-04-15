@@ -20,7 +20,15 @@
     border: none !important;
     background: none !important;
     color: rgba(236, 164, 0, 1) !important;
+    transition: transform 0.3s ease-in-out; 
+    cursor: pointer;
 }
+
+.about-loka-button:hover {
+    color: white !important;
+    transform: scale(1.03);
+}
+
 
 .about-loka-button.isMobile {
     background:  linear-gradient(89.4deg, rgba(51, 15, 150, 0.8) -5.26%, rgba(131, 9, 141, 0.8) 104.63%) !important;

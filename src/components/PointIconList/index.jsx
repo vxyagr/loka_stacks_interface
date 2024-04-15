@@ -15,7 +15,7 @@ const PointIconList = ({ title, listOfPoints }) => {
   return (
     <div
       className="point-icont-list-container"
-      style={{ padding: isMobile ? "20px 20px" : "90px 0px 0px 0px" }}
+      style={{ padding: isMobile ? "20px 0px" : "90px 0px 0px 0px" }}
     >
       <p className="point-title">{title}</p>
       {listOfPoints.map((point) => {
