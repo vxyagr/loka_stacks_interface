@@ -31,12 +31,8 @@
 
 
 .about-loka-button.isMobile {
-    background:  linear-gradient(89.4deg, rgba(51, 15, 150, 0.8) -5.26%, rgba(131, 9, 141, 0.8) 104.63%) !important;
-    color: white !important;
-    border: none !important;
-    padding: 0px 24px !important;
-    margin-top: 36px;
-    height: 48px !important;
+    padding: 0px !important;
+    margin-top: 16px;
 }
 
 /* .about-loka-button:hover {
