@@ -15,7 +15,9 @@
     padding: 32px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 24px;
+    height: 100%;
 }
 
 
@@ -40,13 +42,18 @@
 }
 
 .feature-button {
-    background:  linear-gradient(89.4deg, rgba(51, 15, 150, 0.8) -5.26%, rgba(131, 9, 141, 0.8) 104.63%) !important;
+    background:  linear-gradient(89.4deg, rgba(51, 15, 150, 0.8) -5.26%, rgba(131, 9, 141, 0.8) 104.63%);
     color: white !important;
     border: none !important;
     padding: 0px 24px !important;
     height: 48px !important;
     width: 50%;
 }
+
+.feature-button:hover {
+    background: linear-gradient(89.4deg, rgba(131, 9, 141, 0.8) -5.66%, rgba(51, 15, 150, 0.8) 104.63%) !important;
+}
+
 
 .feature-button.isMobile {
     background:  none !important;
@@ -81,5 +88,14 @@
     line-height: 28px;
     text-align: left;
     color: #D0D5DD;
+    transition: transform 0.3s ease-in-out; 
+    cursor: pointer;
+    
+}
+
+
+.featured-point-text:hover {
+    color: white;
+    transform: scale(1.03);
 }
 

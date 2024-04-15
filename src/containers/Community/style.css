@@ -159,9 +159,18 @@
     margin-bottom: 0px;
 }
 
+
+.success-submit-box {
+    border: 1px solid #85E13A;
+    padding: 8px 16px 8px 16px;
+    gap: 8px;
+    border-radius: 8px;
+    opacity: 0px;
+}
+
 .success-text {
     text-align: center;
-    color: #ECA400;
+    color: #85E13A;
     font-size: 12px;
     margin-top: 5px;
     margin-bottom: 0px;

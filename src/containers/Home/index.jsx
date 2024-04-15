@@ -46,7 +46,7 @@ const Home = () => {
         <Col xs={{ span: 24, order: 2 }} md={{ span: 12, order: 1 }}>
           <div className="text-container">
             <Title className="hero-text">
-              Loka — The Native Yield Protocol for Bitcoin
+              Loka — The Bitcoin Meta Layer with Native Yield Protocol
             </Title>
 
             <Paragraph className="sub-hero-text">

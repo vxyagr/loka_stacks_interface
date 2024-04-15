@@ -13,11 +13,7 @@ const roadmapItems = [
   {
     title: "Current",
     listTitle: "Mining Pool Beta",
-    list: [
-      "Live now",
-      "Current state. 80+ miners connected",
-      "Acquired miners from Ethiopia, Indonesia, Malaysia, Russia etc.",
-    ],
+    list: ["Live now"],
   },
   {
     title: "Q2 2024",

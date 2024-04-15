@@ -90,7 +90,7 @@ const Community = ({ subscribeRef }) => {
 
         if (result === "success") {
           setIsSuccessSubmit(
-            "Your subscription is confirmed. Watch your inbox for the latest from us."
+            "Great! We will send  updates straight to your inbox!"
           );
           setTimeout(() => {
             setIsSuccessSubmit(null);
@@ -189,7 +189,9 @@ const Community = ({ subscribeRef }) => {
               </Button>
             </div>
             {isSuccessSubmit && (
-              <p className="success-text">{isSuccessSubmit}</p>
+              <div className="success-submit-box">
+                <p className="success-text">{isSuccessSubmit}</p>
+              </div>
             )}
           </div>
         </Col>
