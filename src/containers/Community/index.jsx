@@ -256,14 +256,14 @@ const Community = ({ subscribeRef }) => {
           >
             <p>© 2024 Loka Labs. All rights reserved.</p>
             <div className="footer-menu-container">
-              <p>Term</p>
+              
               <p
                 className="footer-linkable-text"
                 onClick={() => handleRedirect()}
               >
                 Privacy
               </p>
-              <p>Cookies</p>
+             
             </div>
           </div>
         </Col>
