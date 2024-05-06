@@ -77,7 +77,7 @@ const Community = ({ subscribeRef }) => {
   const handleSubmitEmail = () => {
     setLoading(true);
 
-    const url = "https://api.lokamining.com/subscribe";
+    const url = "https://api.lokamining.com/subscribe?email=" + emailValue;
 
     axios
       .get(url, {
@@ -87,7 +87,7 @@ const Community = ({ subscribeRef }) => {
       })
       .then((data) => {
         const result = data?.data?.result;
-
+        console.log(result, "<< subscribe");
         if (result === "success") {
           setIsSuccessSubmit(
             "Great! We will send  updates straight to your inbox!"
