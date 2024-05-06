@@ -63,12 +63,11 @@ const Home = () => {
 
             <Button
               onClick={handleHomeButton}
-              block={isMobile}
               className={clsx("about-loka-button", { isMobile })}
               size="large"
             >
               About LOKA
-              {!isMobile && <ArrowRightOutlined />}
+              <ArrowRightOutlined />
             </Button>
           </div>
         </Col>

@@ -117,7 +117,7 @@ const FeatureReference = () => {
               block={isMobile}
               className={clsx("feature-button", { isMobile })}
               size="large"
-              type={isMobile ? "text" : "default"}
+              type="default"
             >
               Get Access to Beta
               <ArrowRightOutlined />
