@@ -77,12 +77,13 @@ const Community = ({ subscribeRef }) => {
   const handleSubmitEmail = () => {
     setLoading(true);
 
-    const url = "https://api.lokamining.com/subscribe?email=" + emailValue;
-
+    const url =
+      "https://api.lokamining.com/subscribe?email=" + emailValue.toString();
+    console.log(url, "<<<<irl");
     axios
       .get(url, {
         params: {
-          email: emailValue,
+          ok: emailValue,
         },
       })
       .then((data) => {
@@ -256,14 +257,12 @@ const Community = ({ subscribeRef }) => {
           >
             <p>© 2024 Loka Labs. All rights reserved.</p>
             <div className="footer-menu-container">
-              
               <p
                 className="footer-linkable-text"
                 onClick={() => handleRedirect()}
               >
                 Privacy
               </p>
-             
             </div>
           </div>
         </Col>
