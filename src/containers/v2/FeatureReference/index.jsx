@@ -4,12 +4,12 @@ import { useMediaQuery } from "react-responsive";
 import { Row, Col, Typography, Button } from "antd";
 import Icon, { ArrowRightOutlined } from "@ant-design/icons";
 
-import CoinDeskLogo from "../../assets/images/coindesk-logo.png";
-import CoinTelegraphLogo from "../../assets/images/cointelegraph-logo.png";
+import CoinDeskLogo from "../../../assets/images/coindesk-logo.png";
+import CoinTelegraphLogo from "../../../assets/images/cointelegraph-logo.png";
 
-import { ReactComponent as NativeYieldLogo } from "../../assets/icons/native-yield.svg";
-import { ReactComponent as BitCoinLogo } from "../../assets/icons/bitcoin.svg";
-import { ReactComponent as QuoteLogo } from "../../assets/icons/quote-icon.svg";
+import { ReactComponent as NativeYieldLogo } from "../../../assets/icons/native-yield.svg";
+import { ReactComponent as BitCoinLogo } from "../../../assets/icons/bitcoin.svg";
+import { ReactComponent as QuoteLogo } from "../../../assets/icons/quote-icon.svg";
 
 import "./style.css";
 

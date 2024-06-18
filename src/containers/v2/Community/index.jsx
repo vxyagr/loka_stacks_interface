@@ -5,9 +5,9 @@ import Icon from "@ant-design/icons";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 
-import LokaLogo from "../../assets/images/loka_logo.png";
-import { ReactComponent as TwitterIconSvg } from "../../assets/icons/twitter.svg";
-import { ReactComponent as DiscordIconSvg } from "../../assets/icons/discord.svg";
+import LokaLogo from "../../../assets/images/loka_logo.png";
+import { ReactComponent as TwitterIconSvg } from "../../../assets/icons/twitter.svg";
+import { ReactComponent as DiscordIconSvg } from "../../../assets/icons/discord.svg";
 
 import "./style.css";
 import clsx from "clsx";

@@ -4,11 +4,11 @@ import { useMediaQuery } from "react-responsive";
 import { Row, Col, Typography } from "antd";
 import Icon from "@ant-design/icons";
 
-import Illustration1 from "../../assets/images/about-illustration1.png";
-import Illustration2 from "../../assets/images/about-illustration2.png";
-import Illustration3 from "../../assets/images/about-illustration3.png";
+import Illustration1 from "../../../assets/images/about-illustration1.png";
+import Illustration2 from "../../../assets/images/about-illustration2.png";
+import Illustration3 from "../../../assets/images/about-illustration3.png";
 
-import { ReactComponent as RightArrowIconSvg } from "../../assets/icons/chevron-right.svg";
+import { ReactComponent as RightArrowIconSvg } from "../../../assets/icons/chevron-right.svg";
 
 import "./style.css";
 

@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { useMediaQuery } from "react-responsive";
 import { Row, Col, Typography, Steps } from "antd";
 
-import PointIconList from "../../components/PointIconList";
+import PointIconList from "../../../components/PointIconList";
 
 import "./style.css";
 

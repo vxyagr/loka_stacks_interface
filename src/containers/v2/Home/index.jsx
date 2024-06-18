@@ -4,13 +4,13 @@ import { useMediaQuery } from "react-responsive";
 
 import { ArrowRightOutlined } from "@ant-design/icons";
 
-import useGetScreenSize from "../../hooks/useGetScreenSize";
+import useGetScreenSize from "../../../hooks/useGetScreenSize";
 
-import HeroImage from "../../assets/images/hero-image.png";
-import BitcoinStartup from "../../assets/images/bitcoin-startup-lab-white.png";
-import Dfinity from "../../assets/images/dfinity-white.png";
-import OutlierVentures from "../../assets/images/outlier-ventures-white.png";
-import Kilonova from "../../assets/images/kilonova-white.png";
+import HeroImage from "../../../assets/images/hero-image.png";
+import BitcoinStartup from "../../../assets/images/bitcoin-startup-lab-white.png";
+import Dfinity from "../../../assets/images/dfinity-white.png";
+import OutlierVentures from "../../../assets/images/outlier-ventures-white.png";
+import Kilonova from "../../../assets/images/kilonova-white.png";
 
 import "./style.css";
 import clsx from "clsx";

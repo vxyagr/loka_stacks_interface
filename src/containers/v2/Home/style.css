@@ -5,6 +5,7 @@
 
 .text-container .ant-typography {
     color: white;
+    /* font-family: SpaceMono !important; */
 }
 
 .text-container .sub-hero-text {

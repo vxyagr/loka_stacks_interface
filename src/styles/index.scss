@@ -1,0 +1,25 @@
+@import './colors.scss';
+@import './mixins.scss';
+@import './fonts.css';
+
+html {
+	-webkit-tap-highlight-color: transparent;
+	font-size: 10px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	margin: 0;
+	background: white;
+	line-height: 1.42857;
+	color: $default-black;
+	font-size: 14px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// common class
+.full-height {
+	@include full-height-container;
+}
