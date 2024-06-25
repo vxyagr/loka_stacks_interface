@@ -88,7 +88,7 @@ function App() {
         break;
       case "miners":
         window.open(
-          "https://miner.lokamining.com/",
+          "https://pool.lokamining.com/",
           "_blank",
           "noopener,noreferrer"
         );
@@ -150,15 +150,7 @@ function App() {
                   >
                     <Menu.Item key={"blog"}>Blog</Menu.Item>
                     <Menu.Item key={"about"}>About</Menu.Item>
-                    <Menu.Item key={"miners"}>
-                      Miners
-                      <img
-                        src={BetaIcon}
-                        alt="loka"
-                        width={45}
-                        style={{ marginLeft: "10px" }}
-                      />
-                    </Menu.Item>
+                    <Menu.Item key={"miners"}>Miners</Menu.Item>
                   </Menu>
                 </div>
               </Col>

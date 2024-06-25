@@ -23,7 +23,7 @@ const FeatureReference = () => {
     switch (key) {
       case "miner":
         window.open(
-          "https://miner.lokamining.com/",
+          "https://pool.lokamining.com/",
           "_blank",
           "noopener,noreferrer"
         );
